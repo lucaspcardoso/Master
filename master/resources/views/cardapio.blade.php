@@ -38,10 +38,10 @@
                             </a>
                         </li>
                         @auth
-                            <li>
+                            <li class="containerCarrinho">
                                 <a href="#">
                                     <img src="imgs/Shopping Cart.png" alt="" />
-                                    <p style="color: white">{{$lunche}}</p>
+                                    <span style="text-decoration: none">{{ $count }}</span>
                                 </a>
                             </li>
                         @endauth
@@ -81,41 +81,43 @@
 
     <main>
         @foreach ($lunch as $l)
-        <div class="post" id="post{{$l->id}}">
-            <div class="containerImgText">
-                <img src="{{$l->img}}" alt="" class="imagemPost" />
+            <div class="post" id="post{{ $l->id }}">
+                <div class="containerImgText">
+                    <img src="{{ $l->img }}" alt="" class="imagemPost" />
 
-                <div class="containerTextPost">
-                    <h3>{{$l->name}}</h3>
-                    <p>
-                       {{$l->description}}
-                    </p>
-                    <p class="price">R${{$l->price}}</p>
+                    <div class="containerTextPost">
+                        <h3>{{ $l->name }}</h3>
+                        <p>
+                            {{ $l->description }}
+                        </p>
+                        <p class="price">R${{ $l->price }}</p>
+                    </div>
+                </div>
+
+                <div class="containerBtn" id="{{ $l->id }}">
+                    @if (\App\Models\Cart::where('product_id', $l->id)->exists())
+                        <form action="/remove-to-cart/{{ $l->id }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btnRemoveCarrinho" data-post-id="{{ $l->id }}"
+                                onclick="toggleCartItem(this)">
+                                Remover do carrinho
+                            </button>
+                        @else
+                            <form action="/add-to-cart/{{ $l->id }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btnAddCarrinho" data-post-id="{{ $l->id }}"
+                                    onclick="toggleCartItem(this)">
+                                    Adicionar ao carrinho
+                                </button>
+                    @endif
+                    </form>
                 </div>
             </div>
-
-            <div class="containerBtn" id="{{$l->id}}">
-                    @if (\App\Models\Cart::where('product_id', $l->id)->exists())
-                    <form action="/remove-to-cart/{{$l->id}}" method="POST">
-                    @csrf
-                    @method('delete')
-                    <button type="submit" class="btnRemoveCarrinho" data-post-id="{{$l->id}}" onclick="toggleCartItem(this)">
-                        Remover do carrinho
-                    </button>
-                    @else
-                    <form action="/add-to-cart/{{$l->id}}" method="POST">
-                        @csrf
-                    <button type="submit" class="btnAddCarrinho" data-post-id="{{$l->id}}" onclick="toggleCartItem(this)">
-                        Adicionar ao carrinho
-                    </button>
-                    @endif
-                </form>
-            </div>
-        </div>
         @endforeach
 
         @error('add')
-        <p>{{$message}}</p>
+            <p>{{ $message }}</p>
         @enderror
     </main>
 

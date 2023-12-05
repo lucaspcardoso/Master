@@ -133,6 +133,25 @@ nav {
     text-decoration: none;
 }
 
+.containerCarrinho a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.containerCarrinho span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #ff981d;
+}
+
+
 @media (max-width: 768px) {
     nav {
         margin-left: 0;

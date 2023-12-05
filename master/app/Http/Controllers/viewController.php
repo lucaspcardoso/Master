@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Lunch;
 use Illuminate\Http\Request;
 
-class viewController extends Controller
-{
-    public function cardapio()
-    {
+class viewController extends Controller {
+    public function cardapio() {
         $lunch = Lunch::all();
-        return view('cardapio', ['lunch' => $lunch]);
+        $count = Cart::where('user_id', auth()->user()->id)->count();
+        return view('cardapio', ['lunch' => $lunch, 'count' => $count]);
     }
 
-    public function contact()
-    {
+    public function contact() {
         return view('contact');
     }
 }
