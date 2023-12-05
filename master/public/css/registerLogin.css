@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Evolve;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../font/coolvetica.otf);
+}
+
+@font-face {
+    font-family: Evolve;
+    src: url(../font/Evolve.otf);
+}
+
+/* Login */
+.containerAll {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLeft {
+    width: 43%;
+    height: 100vh;
+    background-color: #002a19;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Direita */
+
+.containerRight {
+    display: flex;
+    width: 57%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLogo {
+    display: flex;
+    margin-top: 1vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerError {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 20px;
+    position: absolute;
+    margin-top: 10px;
+    border-radius: 10px;
+    top: 0;
+    right: -1000px;
+    background-color: #ff9494;
+}
+
+button,
+#btnClose {
+    cursor: pointer;
+}
+
+.containerError h1 {
+    font-size: 1.1rem;
+    color: #f36060;
+}
+
+.containerError p {
+    color: #f36060;
+}
+
+.containerError div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.containerError img {
+    height: 3vh;
+}
+
+.loginLogo {
+    margin-top: 5vh;
+}
+
+.containerLogo img {
+    height: 15vh;
+}
+
+.containerLogo h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: coolvetica;
+}
+
+.containerInputs {
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.block1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.block1 input {
+    padding: 5px 18px;
+}
+
+.none {
+    display: none;
+}
+
+.inputCont {
+    margin-bottom: 2vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ajuste a largura conforme necessário */
+}
+
+.check {
+    margin-bottom: 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20vh;
+}
+
+.cEsqueciSenha {
+    text-align: start;
+    width: 70%;
+}
+
+.esqueciSenha {
+    color: #ff910d;
+    text-align: start;
+    text-decoration: none;
+}
+
+.esqueciSenha:hover {
+    text-decoration: underline;
+}
+
+.check a {
+    color: #ff910d;
+}
+
+label.checkLabel {
+    margin-left: 0;
+    font-size: 0.8rem;
+}
+
+.check input {
+    width: max-content;
+    margin-right: 5px;
+}
+
+.containerBtns {
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.btnProximaEtapa {
+    border-radius: 50px;
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    padding: 5px 10%;
+    background-color: #ff910d;
+}
+
+label {
+    margin-left: 10vw;
+    text-align: start !important;
+    font-size: 1.2rem;
+}
+
+.label {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    margin-bottom: 0.5vh;
+}
+
+.accont {
+    margin-top: 2vh;
+}
+
+.entrar {
+    color: #ff910d;
+}
+
+.stage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerStage {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0;
+}
+
+.Cetapa {
+    font-size: 1.4rem;
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 10px;
+    right: 0;
+    top: 0;
+}
+
+.circle1 {
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 15px;
+    background-color: #002a19;
+    transition: ease-in-out 0.5s;
+}
+
+.circle2 {
+    height: 15px;
+    border-radius: 50%;
+    width: 15px;
+    background-color: #528570;
+    transition: ease-in-out 0.5s;
+}
+
+input {
+    outline: none;
+    border: 1px solid #000;
+    width: 70%;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    padding: 2px 18px;
+}
+
+@media (max-width: 768px) {
+    .containerLeft {
+        display: none;
+    }
+
+    .containerRight {
+        width: 100%;
+    }
+}

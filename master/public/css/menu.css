@@ -1,0 +1,150 @@
+/* Menu */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 13vh;
+    margin-left: 14%;
+}
+
+.containerLogo {
+    width: 15%;
+    position: absolute;
+    left: 0;
+}
+
+.logo {
+    width: 10vw;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+.containerNavDireita {
+    display: flex;
+    flex-direction: row;
+    background-color: #0c4434;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+}
+
+.containerNavDireita input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 1.4rem;
+    width: 30vw;
+    padding: 3px 10px;
+}
+
+.containerNavDireita .containerInput {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin-left: 2vw;
+}
+
+.containerElementsNav {
+    display: flex;
+    gap: 69px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerNavDireita .containerInput a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerNavDireita .containerInput img {
+    margin-right: 1vw;
+    height: 3vh;
+    cursor: pointer;
+}
+
+.containerNavDireita ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-right: 5vw;
+    justify-content: end;
+}
+
+.containerNavDireita ul li a img {
+    height: 5vh;
+}
+
+.iconUser {
+    height: 10vh !important;
+}
+
+.containerLoginsHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    background-color: #ff8b00;
+}
+
+.cad {
+    background-color: white;
+    color: #ff8b00 !important;
+}
+
+.containerLoginsHome a:first-child {
+    margin-bottom: 5px;
+}
+
+.containerLoginsHome a {
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 175px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        margin-left: 0;
+    }
+
+    .containerLogo {
+        width: 5vw;
+        position: relative;
+    }
+
+    .logo {
+        margin-left: 1;
+    }
+
+    .containerNavDireita input {
+        width: 40vw;
+    }
+
+    .containerElementsNav {
+        gap: 5%;
+    }
+
+    .containerNavDireita ul {
+        margin-right: 2vw;
+    }
+
+    .containerNavDireita ul li a img {
+        height: 5vh;
+    }
+
+    .iconUser {
+        height: 7vh !important;
+    }
+}

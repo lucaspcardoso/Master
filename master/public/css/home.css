@@ -1,0 +1,365 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Evolve;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../font/coolvetica.otf);
+}
+
+@font-face {
+    font-family: Evolve;
+    src: url(../font/Evolve.otf);
+}
+
+/* Menu */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 13vh;
+    margin-left: 14%;
+}
+
+.containerLogo {
+    width: 15%;
+    position: absolute;
+    left: 0;
+}
+
+.logo {
+    width: 10vw;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+.containerNavDireita {
+    display: flex;
+    flex-direction: row;
+    background-color: #0c4434;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+}
+
+.containerNavDireita input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 1.4rem;
+    width: 30vw;
+    padding: 3px 10px;
+}
+
+.containerNavDireita .containerInput {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin-left: 2vw;
+}
+
+.containerElementsNav {
+    display: flex;
+    gap: 69px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerNavDireita .containerInput a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerNavDireita .containerInput img {
+    margin-right: 1vw;
+    height: 3vh;
+    cursor: pointer;
+}
+
+.containerNavDireita ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-right: 5vw;
+    justify-content: end;
+}
+
+.containerNavDireita ul li a img {
+    height: 5vh;
+}
+
+.iconUser {
+    height: 10vh !important;
+}
+
+.containerLoginsHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    background-color: #ff8b00;
+}
+
+.cad {
+    background-color: white;
+    color: #ff8b00 !important;
+}
+
+.containerLoginsHome a:first-child {
+    margin-bottom: 5px;
+}
+
+.containerLoginsHome a {
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 175px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        margin-left: 0;
+    }
+
+    .containerLogo {
+        width: 5vw;
+        position: relative;
+    }
+
+    .logo {
+        margin-left: 1;
+    }
+
+    .containerNavDireita input {
+        width: 40vw;
+    }
+
+    .containerElementsNav {
+        gap: 5%;
+    }
+
+    .containerNavDireita ul {
+        margin-right: 2vw;
+    }
+
+    .containerNavDireita ul li a img {
+        height: 5vh;
+    }
+
+    .iconUser {
+        height: 7vh !important;
+    }
+}
+
+/* Introdução */
+
+.containerText {
+    width: 70%;
+}
+
+.containerImgIntro {
+    width: 100%;
+}
+
+.containerIntro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.containerButton {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerButton a {
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0px;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+}
+
+.cardapio {
+    margin-top: 5vh;
+    background-color: #ff8b00;
+    margin-bottom: 10px;
+}
+
+.cardapio:hover {
+    background-color: #dd7a02;
+}
+
+.contact {
+    background-color: #0c4434;
+}
+
+.contact:hover {
+    background-color: #0d503d;
+}
+
+.containerText h3 {
+    font-size: 4.5rem;
+    color: #0c4434;
+    font-family: coolvetica;
+}
+
+.containerImgIntro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.containerImgIntro img {
+    height: 80vh;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.circleArt1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.circleArt2 {
+    position: absolute;
+    right: 0;
+    top: 12vh;
+    z-index: 0;
+    transform: rotate(180deg);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Carrossel */
+
+.containerCarrossel {
+    padding-top: 5vh;
+    background-color: #0c4434;
+}
+
+.containerCarrossel h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+    font-family: coolvetica;
+}
+
+/*  */
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.cards-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 calc(100% / 3 - 18px); /* Show three cards at a time, adjust the width and margin as needed */
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card > img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card p {
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card .btnAddCarrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8b00;
+    padding: 10px 0px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.card .btnAddCarrinho img {
+    width: 4vh;
+    height: 4vh;
+    margin-right: 10px;
+}
+
+.arrow-left,
+.arrow-right {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-left img,
+.arrow-right img {
+    filter: invert(100);
+}
+
+.arrow-left {
+    margin-right: 20px;
+}
