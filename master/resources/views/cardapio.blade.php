@@ -39,7 +39,7 @@
                         </li>
                         @auth
                             <li class="containerCarrinho">
-                                <a href="#">
+                                <a href="/carrinho">
                                     <img src="imgs/Shopping Cart.png" alt="" />
                                     <span style="text-decoration: none">{{ $count }}</span>
                                 </a>
