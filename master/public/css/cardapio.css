@@ -366,3 +366,10 @@ main {
     right: 10px;
     cursor: pointer;
 }
+
+.formPopUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

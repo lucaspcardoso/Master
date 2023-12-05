@@ -96,20 +96,16 @@
 
                 <div class="containerBtn" id="{{ $l->id }}">
                     @if (\App\Models\Cart::where('product_id', $l->id)->exists())
-                        <form action="/remove-to-cart/{{ $l->id }}" method="POST">
+                        <button type="button" class="btnRemoveCarrinho btnOpenPopup"
+                            data-post-id="{{ $l->cart->first()->id }}">
+                            Remover do carrinho
+                        </button>
+                    @else
+                        <form action="/add-to-cart/{{ $l->id }}" method="POST">
                             @csrf
-                            @method('delete')
-                            <button type="submit" class="btnRemoveCarrinho" data-post-id="{{ $l->id }}"
-                                onclick="toggleCartItem(this)">
-                                Remover do carrinho
+                            <button type="submit" class="btnAddCarrinho" data-post-id="{{ $l->id }}">
+                                Adicionar ao carrinho
                             </button>
-                        @else
-                            <form action="/add-to-cart/{{ $l->id }}" method="POST">
-                                @csrf
-                                <button type="submit" class="btnAddCarrinho" data-post-id="{{ $l->id }}"
-                                    onclick="toggleCartItem(this)">
-                                    Adicionar ao carrinho
-                                </button>
                     @endif
                     </form>
                 </div>
@@ -125,12 +121,16 @@
     </div>
 
     <div id="popup">
-        <img src="{{ asset('imgs/Remove shopping cart.png') }}" alt="">
-        <h2>Deseja mesmo excluir esse item do seu carrinho?</h2>
-        <div class="containerButtonPopUp">
-            <button type="button" id="continue" class="continue">Continuar</button>
-            <button type="button" id="cancel" class="cancel">Cancelar</button>
-        </div>
+        <form action="" method="POST" id="formPopUp" class="formPopUp">
+            @csrf
+            @method('delete')
+            <img src="{{ asset('imgs/Remove shopping cart.png') }}" alt="">
+            <h2>Deseja mesmo excluir esse item do seu carrinho?</h2>
+            <div class="containerButtonPopUp">
+                <button type="submit" id="continue" class="continue">Continuar</button>
+                <button type="button" id="cancel" class="cancel">Cancelar</button>
+            </div>
+        </form>
     </div>
 
 

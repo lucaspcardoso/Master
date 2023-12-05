@@ -8,10 +8,8 @@ use App\Models\Lunch;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
-class CarrinhoController extends Controller
-{
-    public function add(Request $request, string $id)
-    {
+class CarrinhoController extends Controller {
+    public function add(Request $request, string $id) {
         $cart = new Cart();
         $cart->user_id = auth()->user()->id;
         $cart->product_id = $id;
@@ -20,8 +18,8 @@ class CarrinhoController extends Controller
         return redirect()->back()->withErrors(['add' => 'Adicionado com sucesso']);
     }
 
-    public function remove(string $id){
-        $cart = Cart::find($id)->first();
+    public function remove(string $id) {
+        $cart = Cart::find($id);
         $cart->delete();
         return redirect()->back()->withErrors(['add' => 'Apagado com sucesso']);
     }
