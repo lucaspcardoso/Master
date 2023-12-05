@@ -16,4 +16,8 @@ class viewController extends Controller {
     public function contact() {
         return view('contact');
     }
+
+    public function carrinho() {
+        return view('carrinho');
+    }
 }

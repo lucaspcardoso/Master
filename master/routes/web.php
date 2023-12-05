@@ -29,6 +29,7 @@ Route::controller(UserRegisterController::class)->group(function () {
 Route::controller(viewController::class)->group(function () {
     Route::get("/cardapio", 'cardapio');
     Route::get("/contact", "contact");
+    Route::get('/carrinho', 'carrinho');
 });
 
 Route::post('/add-to-cart/{id}', [CarrinhoController::class, 'add']);
