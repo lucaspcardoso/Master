@@ -18,6 +18,7 @@ class viewController extends Controller {
     }
 
     public function carrinho() {
-        return view('carrinho');
+        $cart = Cart::where('user_id', auth()->user()->id)->get();
+        return view('carrinho', ['cart' => $cart]);
     }
 }
