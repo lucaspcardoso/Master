@@ -16,3 +16,29 @@
     font-family: Evolve;
     src: url(../font/Evolve.otf);
 }
+
+/* main */
+main {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.containerMainCarrinho {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerMainCarrinho span {
+    font-size: 1.4rem;
+}
+
+.containerMainCarrinho span a {
+    color: #ff910d;
+    text-decoration: none;
+    margin-left: 5vw;
+}
+
+.containerMainCarrinho span a:hover {
+    text-decoration: underline;
+}

@@ -13,6 +13,12 @@
 
 <body>
     <main>
-        <p>teste</p>
+        <div class="containerMainCarrinho">
+            <span>Seu pedido em <strong> Master - Amparo(SP)</strong><a href="/cardapio">Ver Cardápio</a></span>
+        </div>
+
+        <div class="listCarrinho">
+
+        </div>
     </main>
 </body>
