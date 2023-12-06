@@ -12,5 +12,7 @@
 @livewire('navigation-menu')
 
 <body>
-
+    <main>
+        <p>teste</p>
+    </main>
 </body>

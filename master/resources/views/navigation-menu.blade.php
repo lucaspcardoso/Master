@@ -28,10 +28,12 @@
                     </li>
 
                     @auth
-                        <a href="/carrinho">
-                            <img src="imgs/Shopping Cart.png" alt="" />
-                            <span style="text-decoration: none">{{ $count }}</span>
-                        </a>
+                        <li class="containerCarrinho">
+                            <a href="/carrinho">
+                                <img src="imgs/Shopping Cart.png" alt="" />
+                                <span style="text-decoration: none">{{ $count }}</span>
+                            </a>
+                        </li>
                     @endauth
                 </div>
 
