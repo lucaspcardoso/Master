@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarrinhoController;
+use App\Http\Controllers\CuponController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\viewController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::controller(CuponController::class)->group(function () {
+    Route::post('/verificarCupom', 'verificarCupom');
+});
+
 Route::controller(UserRegisterController::class)->group(function () {
     Route::post("/registerUser", 'store');
     Route::get('/logout', 'logout');
@@ -30,6 +35,7 @@ Route::controller(viewController::class)->group(function () {
     Route::get("/cardapio", 'cardapio');
     Route::get("/contact", "contact");
     Route::get('/carrinho', 'carrinho');
+    Route::get('/cupom/pedido', 'cupom');
 });
 
 Route::post('/add-to-cart/{id}', [CarrinhoController::class, 'add']);

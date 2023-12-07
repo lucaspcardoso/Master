@@ -2,7 +2,7 @@
     <nav>
         <div class="containerLogo">
             <a href="/">
-                <img src="imgs/M.png" alt="" class="logo" />
+                <img src="{{ asset('imgs/M.png') }}" alt="" class="logo" />
             </a>
         </div>
 
@@ -10,27 +10,27 @@
             <div class="containerInput">
                 <input type="text" />
                 <a href="#">
-                    <img src="imgs/Vector.png" alt="" />
+                    <img src="{{ asset('imgs/Vector.png') }}" alt="" />
                 </a>
             </div>
             <ul>
                 <div class="containerElementsNav">
                     <li>
                         <a href="/cardapio">
-                            <img src="imgs/Cutlery.png" alt="" />
+                            <img src="{{ asset('imgs/Cutlery.png') }}" alt="" />
                         </a>
                     </li>
 
                     <li>
                         <a href="/contact" target="_blank">
-                            <img src="imgs/Call.png" alt="" />
+                            <img src="{{ asset('imgs/Call.png') }}" alt="" />
                         </a>
                     </li>
 
                     @auth
                         <li class="containerCarrinho">
                             <a href="/carrinho">
-                                <img src="imgs/Shopping Cart.png" alt="" />
+                                <img src="{{ asset('imgs/Shopping Cart.png') }}" alt="" />
                                 <span style="text-decoration: none">{{ $count }}</span>
                             </a>
                         </li>
@@ -48,7 +48,7 @@
                         @endguest
                         @auth
                             <a href="#">
-                                <img src="imgs/Male User.png" alt="" class="iconUser" />
+                                <img src="{{ asset('imgs/Male User.png') }}" alt="" class="iconUser" />
                             </a>
                         @endauth
                     </li>

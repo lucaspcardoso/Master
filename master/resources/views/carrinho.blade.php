@@ -35,6 +35,7 @@
                 @php
                     $precoUni = $c->product->price + $total;
                     $total = $precoUni;
+                    $desc = $c->cupom->desconto;
                 @endphp
             @empty
                 <h1 class="notFound">Não há nenhum item no seu carrinho.</h1>
@@ -48,7 +49,7 @@
                         <span>Cupons</span>
                     </div>
 
-                    <a href="/cupon/pedido"><img src="{{ asset('imgs/next.png') }}" alt=""></a>
+                    <a href="/cupom/pedido"><img src="{{ asset('imgs/next.png') }}" alt=""></a>
                 </div>
 
                 <div class="notaFiscal">
@@ -65,7 +66,7 @@
 
                     <div>
                         <span class="total">Total</span>
-                        <span>R${{ $total + 5.99 }}</span>
+                        <span>R${{ number_format(($total * (100 - $desc)) / 100 + 5.99, 2, ',', '.') }}</span>
                     </div>
                 </div>
 

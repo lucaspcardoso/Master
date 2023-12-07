@@ -21,4 +21,8 @@ class viewController extends Controller {
         $cart = Cart::where('user_id', auth()->user()->id)->get();
         return view('carrinho', ['cart' => $cart]);
     }
+
+    public function cupom() {
+        return view('cupom');
+    }
 }

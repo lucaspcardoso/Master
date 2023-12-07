@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Evolve;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../font/coolvetica.otf);
+}
+
+@font-face {
+    font-family: Evolve;
+    src: url(../font/Evolve.otf);
+}
+
+/* Main */
+
+body {
+    overflow-y: hidden;
+}
+
+main {
+    margin-top: 12vh;
+    margin-left: 13vw;
+    margin-right: 13vw;
+}
+
+main h2 {
+    font-family: coolvetica;
+    font-weight: 500;
+}
+
+.containerInputCupom {
+    display: flex;
+    margin-top: 5vh;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #002a19;
+    border-radius: 20px;
+    padding: 7px 2px;
+}
+
+.containerInputCupom input {
+    border: none;
+    margin-left: 10px;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.containerInputCupom button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.containerInputCupom button img {
+    height: 4vh;
+    width: 4vh;
+}
+
+/* containerNoCupomImg */
+
+.containerNoCupomImg {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    justify-content: space-between;
+    height: 45vh;
+}
+
+.containerNoCupom {
+    display: flex;
+    flex-direction: row;
+    border: #002a19 1px solid;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    width: 40%;
+}
+
+.containerNoCupom img {
+    height: 8vh;
+}
+
+.containerImageText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.containerNoCupom .containerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+.containerText span {
+    font-size: 1.1rem;
+}
+
+.containerText span:first-child {
+    margin-bottom: 5px;
+}
+
+.containerText span:last-child {
+    color: #000;
+    opacity: 0.75;
+}
+
+.containerRadio {
+    margin-right: 15px;
+}
+
+.containerNoCupomImg input[type="radio"] {
+    transform: scale(1.4);
+}
+
+.containerBtnBack {
+    margin-left: 10px;
+}
+
+.containerBtnBack a {
+    background-color: #ff910d;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 40px;
+}
+
+/* Imagem */
+
+.containerImagem {
+    position: absolute;
+    right: 9vw;
+}
+
+.containerImagem img {
+    height: 48vh;
+}
