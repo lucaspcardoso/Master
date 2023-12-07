@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class viewController extends Controller {
     public function cardapio() {
         $lunch = Lunch::all();
-        $count = Cart::where('user_id', auth()->user()->id)->count();
-        return view('cardapio', ['lunch' => $lunch, 'count' => $count]);
+        return view('cardapio', ['lunch' => $lunch]);
     }
 
     public function contact() {
@@ -24,5 +23,9 @@ class viewController extends Controller {
 
     public function cupom() {
         return view('cupom');
+    }
+
+    public function pagamento() {
+        return view('pagamento');
     }
 }

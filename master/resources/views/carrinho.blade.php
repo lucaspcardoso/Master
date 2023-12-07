@@ -35,7 +35,10 @@
                 @php
                     $precoUni = $c->product->price + $total;
                     $total = $precoUni;
-                    $desc = $c->cupom->desconto;
+                    if (!empty($c->cupom->desconto)) {
+                        $desc = $c->cupom->desconto;
+                    }
+
                 @endphp
             @empty
                 <h1 class="notFound">Não há nenhum item no seu carrinho.</h1>
@@ -66,7 +69,12 @@
 
                     <div>
                         <span class="total">Total</span>
-                        <span>R${{ number_format(($total * (100 - $desc)) / 100 + 5.99, 2, ',', '.') }}</span>
+                        @if (!empty($c->cupom->desconto))
+                            <span>R${{ number_format(($total * (100 - $desc)) / 100 + 5.99, 2, ',', '.') }}</span>
+                        @else
+                            <span>R${{ number_format($total + 5.99, 2, ',', '.') }}</span>
+                        @endif
+
                     </div>
                 </div>
 

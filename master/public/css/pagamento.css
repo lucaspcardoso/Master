@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Evolve;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../font/coolvetica.otf);
+}
+
+@font-face {
+    font-family: Evolve;
+    src: url(../font/Evolve.otf);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    margin-top: 12vh;
+    margin-left: 13vw;
+    margin-right: 13vw;
+}
+
+main h2 {
+    font-family: coolvetica;
+    font-weight: 500;
+}
+
+.containerOption {
+    display: flex;
+    margin-top: 5vh;
+}
+
+.containerOption span {
+    font-size: 1.2rem;
+}
+
+.containerOption span:first-child {
+    margin-right: 4vw;
+}
+
+.active {
+    color: #ff910d;
+    border-bottom: 1px solid #ff910d;
+}
+
+/* Endereço */
+
+.containerEndTroc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.containerEndTroc a {
+    color: #ff910d;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.containerEndTroc a:hover {
+    text-decoration: underline;
+}
+
+.containerTrocar {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.containerEndereco,
+.containerMetPag {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 15px 5px;
+    border: 2px solid rgba(0, 42, 25, 0.6);
+}
+
+.containerEndereco img {
+    height: 13vh;
+    margin-left: 10px;
+}
+
+.containerEndereco div p {
+    font-size: 1.2rem;
+}
+
+/* Metodo de Pagamento */
+
+.containerMetPag {
+    margin-top: 5vh;
+    align-items: start;
+    flex-direction: column;
+}
+
+.containerMetImg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.containerMetodo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerMetodo img {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+}
+
+.desc {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.containerInput input[type="radio"] {
+    margin-right: 20px;
+    transform: scale(1.2);
+}
+
+/* Adicionar Cartão */
+
+.containerAddCartao {
+    width: 90%;
+    margin-top: 5vh;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+
+.containerAddText {
+    margin-top: 5vh;
+}
+
+.containerAddText h2,
+.containerAddText p {
+    margin-bottom: 2vh;
+}
+
+.containerAddText a {
+    color: #ff910d;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.containerBtnBack {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.containerBtnBack button {
+    background-color: #ff910d;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 40px;
+}
