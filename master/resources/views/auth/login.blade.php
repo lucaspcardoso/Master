@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="containerBtns">
-                        <button class="btnProximaEtapa" id="register" type="submit">Cadastrar</button>
+                        <button class="btnProximaEtapa" id="register" type="submit">Entrar</button>
                     </div>
 
                     @error('email')

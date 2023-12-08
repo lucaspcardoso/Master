@@ -17,6 +17,10 @@
     src: url(../font/Evolve.otf);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 button {
     cursor: pointer;
 }
@@ -41,6 +45,7 @@ main h2 {
 
 .containerOption span {
     font-size: 1.2rem;
+    transition: 0.5s ease-in-out;
 }
 
 .containerOption span:first-child {
@@ -80,12 +85,17 @@ main h2 {
 .containerEndereco,
 .containerMetPag {
     width: 90%;
+    height: 33vh;
     display: flex;
     align-items: center;
     flex-direction: row;
     border-radius: 20px;
     padding: 15px 5px;
     border: 2px solid rgba(0, 42, 25, 0.6);
+}
+
+.containerEndereco {
+    height: max-content;
 }
 
 .containerEndereco img {
@@ -172,4 +182,8 @@ main h2 {
     text-decoration: none;
     font-size: 1.3rem;
     padding: 8px 40px;
+}
+
+.none {
+    display: none;
 }
