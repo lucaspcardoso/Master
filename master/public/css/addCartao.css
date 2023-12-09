@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Evolve;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../font/coolvetica.otf);
+}
+
+@font-face {
+    font-family: Evolve;
+    src: url(../font/Evolve.otf);
+}
+
+/* main */
+main {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: coolvetica;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 7vh;
+}
+
+.containerMeioPag {
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 2px solid rgba(0, 42, 25, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.containerMeioPag div {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.containerMeioPag div span {
+    margin-left: 20px;
+}
+
+.containerMeioPag > img {
+    height: 4vh;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+/* Block2 */
+
+.typePayment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.typePayment span {
+    font-size: 1.3rem;
+    margin-left: 15px;
+}
+
+.back {
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+.containerDividido {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 55vh;
+}
+
+.containerForm div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerForm div input {
+    width: 48%;
+}
+
+.containerForm input {
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-bottom: 1vh;
+    border: 1px solid rgba(0, 42, 25, 0.6);
+}
+
+.btnAdd {
+    border: none;
+    width: 25%;
+    background-color: #ff981d;
+    padding: 5px 0px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Cartão */
+
+.containerCard {
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    height: 48vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: rgba(255, 145, 13, 0.4);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 30vw;
+    padding: 20px;
+    height: 40vh;
+}
+
+.cardTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cardNumbers {
+    font-size: 1.5rem;
+}
+
+.cardNameValidade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    color: rgba(0, 0, 0, 0.6);
+}

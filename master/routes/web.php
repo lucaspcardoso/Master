@@ -37,6 +37,7 @@ Route::controller(viewController::class)->group(function () {
     Route::get('/carrinho', 'carrinho');
     Route::get('/cupom/pedido', 'cupom');
     Route::get('/formaPagamento', 'pagamento');
+    Route::get('/addCartao', 'cartao');
 });
 
 Route::post('/add-to-cart/{id}', [CarrinhoController::class, 'add']);

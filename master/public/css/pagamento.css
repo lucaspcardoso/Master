@@ -21,7 +21,11 @@ body {
     overflow-x: hidden;
 }
 
-button {
+button,
+#site,
+#empresa,
+#entrega,
+#retirada {
     cursor: pointer;
 }
 
