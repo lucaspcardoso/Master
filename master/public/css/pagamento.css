@@ -178,7 +178,8 @@ main h2 {
     margin-bottom: 20px;
 }
 
-.containerBtnBack button {
+.containerBtnBack button,
+.containerBtnBack a {
     background-color: #ff910d;
     border: none;
     border-radius: 50px;

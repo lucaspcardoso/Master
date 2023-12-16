@@ -8,6 +8,7 @@ var back = document.getElementById("back");
 var saidaNcartao = document.getElementById("outNcartao");
 var saidaName = document.getElementById("outName");
 var saidaValidade = document.getElementById("outValidade");
+var type = document.getElementById("type");
 
 function nextStage(text) {
     var block1 = document.querySelector(".block1");
@@ -23,6 +24,7 @@ function nextStage(text) {
             block2.classList.remove("none");
             texto.innerHTML = text;
             cardTitle.innerHTML = text;
+            type.value = text;
             gsap.from(".block2", {
                 x: "100%",
                 duration: 0.5,
@@ -72,6 +74,8 @@ var nome = document.getElementById("name");
 var validade = document.getElementById("validade");
 var cpf = document.getElementById("cpf");
 
+var bandeira = document.getElementById("bandeira");
+
 cpf.addEventListener("input", () => {
     cpf.value = cpf.value.replace(
         /(\d{3})(\d{3})(\d{3})(\d{2})/,
@@ -84,6 +88,21 @@ nCartao.addEventListener("input", () => {
         /(\d{4})(\d{4})(\d{4})(\d{4})/,
         "$1 $2 $3 $4"
     );
+
+    pDigito = nCartao.value[0];
+
+    if (pDigito == 3) {
+        bandeira.value = "American Express";
+    } else if (pDigito == 4) {
+        bandeira.value = "Visa";
+    } else if (pDigito == 5) {
+        bandeira.value = "Mastercard";
+    } else if (pDigito == 6) {
+        bandeira.value = "Discover";
+    } else {
+        bandeira.value = "";
+    }
+
     saidaNcartao.innerHTML = nCartao.value.replace(
         /(\d{4})(\d{4})(\d{4})(\d{4})/,
         "$1 $2 $3 $4"
@@ -98,3 +117,20 @@ validade.addEventListener("input", () => {
     validade.value = validade.value.replace(/(\d{2})(\d{2})/, "$1/$2");
     saidaValidade.innerHTML = validade.value.replace(/(\d{2})(\d{2})/, "$1/$2");
 });
+
+if (document.getElementById("popup")) {
+    var popup = document.getElementById("popup");
+    var overlay = document.getElementById("overlay");
+
+    var btnFechar = document.getElementById("btnFechar");
+
+    popup.style.display = "flex";
+    overlay.style.display = "flex";
+
+    function closePopup() {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    }
+
+    btnFechar.addEventListener("click", closePopup);
+}

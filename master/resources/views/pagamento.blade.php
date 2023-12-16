@@ -50,7 +50,7 @@
             <span id="empresa">Pague na empresa</span>
         </div>
 
-        <form action="">
+        <form>
             <div class="containerMetPag" id="metodoBlock1">
                 <div class="containerMetodo">
                     <div class="containerMetImg">
@@ -125,7 +125,10 @@
         </div>
 
         <div class="containerBtnBack">
-            <button type="button">Fazer Pedido</button>
+            <form action="/pedido" method="POST">
+                @csrf
+                <button type="submit">Fazer Pedido</button>
+            </form>
         </div>
     </main>
 </body>

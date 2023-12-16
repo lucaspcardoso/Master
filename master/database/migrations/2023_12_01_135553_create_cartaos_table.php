@@ -13,11 +13,12 @@ return new class extends Migration {
         Schema::create('cartaos', function (Blueprint $table) {
             $table->id();
             $table->string("titular");
-            $table->integer("nCartao");
+            $table->string("nCartao");
             $table->string("bandeira");
             $table->date("dataVencimento");
             $table->string("codSeguraca");
             $table->string('type');
+            $table->string('cpf');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

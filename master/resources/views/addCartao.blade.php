@@ -48,6 +48,8 @@
                         </div>
                         <img src="{{ asset('imgs/next.png ') }}" alt="" id="va">
                     </div>
+
+
             </div>
 
             <div class="block2 none">
@@ -57,10 +59,13 @@
                 </div>
 
                 <div class="containerDividido">
-                    <form action="" method="POST" class="containerForm">
+                    <form action="/cartao" method="POST" class="containerForm">
+                        @csrf
                         <input type="text" placeholder="Número do cartão" required id="nCartao" name="nCartao">
                         <input type="text" placeholder="Nome impresso no cartão" required id="name"
                             name="name">
+                        <input type="hidden" name="type" id="type">
+                        <input type="hidden" name="bandeira" id="bandeira">
 
                         <div>
                             <input type="text" placeholder="Validade" id="validade" name="validade">
@@ -94,6 +99,20 @@
             </div>
         </div>
     </main>
+
+    @error('add')
+        <div class="overlay" id="overlay"></div>
+        <div id="popup">
+            <div class="containerClose" id="btnFechar">
+                <img src="{{ asset('imgs/close.png') }}" alt="">
+            </div>
+            <span>{{ $message }}</span>
+            <p>Deseja voltar para a tela principal?</p>
+
+            <a class="btnVoltar" href="/formaPagamento">Voltar</a>
+        </div>
+    @enderror
+
 </body>
 
 <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>

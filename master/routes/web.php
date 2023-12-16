@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CarrinhoController;
+use App\Http\Controllers\CartaoController;
 use App\Http\Controllers\CuponController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\viewController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +33,10 @@ Route::controller(UserRegisterController::class)->group(function () {
     Route::post('/loginUser', 'login');
 });
 
+Route::controller(CartaoController::class)->group(function () {
+    Route::post('/cartao', 'store');
+});
+
 Route::controller(viewController::class)->group(function () {
     Route::get("/cardapio", 'cardapio');
     Route::get("/contact", "contact");
@@ -38,6 +44,10 @@ Route::controller(viewController::class)->group(function () {
     Route::get('/cupom/pedido', 'cupom');
     Route::get('/formaPagamento', 'pagamento');
     Route::get('/addCartao', 'cartao');
+});
+
+Route::controller(PedidoController::class)->group(function () {
+    Route::post('/pedido', 'makePedido');
 });
 
 Route::post('/add-to-cart/{id}', [CarrinhoController::class, 'add']);
